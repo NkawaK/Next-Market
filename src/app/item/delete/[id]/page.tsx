@@ -2,9 +2,9 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/utils/useAuth";
-import { getSingleItem } from "../../readsingle/[id]/page";
 import Image from "next/image";
 import type { ItemModel } from "@/app/api/item/update/[id]/route";
+import { getSingleItem } from "@/app/utils/getSingleItem";
 
 const DeleteItem = ({ params }: { params: { id: string } }) => {
   const [formDate, setFormData] = useState<Omit<ItemModel, "_id" | "__v">>({
