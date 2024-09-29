@@ -15,7 +15,7 @@ interface DBColumn {
   __v: number;
 }
 
-type ItemModel = ReqBody & DBColumn;
+export type ItemModel = ReqBody & DBColumn;
 
 export const PUT = async (
   request: Request,
