@@ -2,6 +2,9 @@ import type { ItemModel } from "@/app/api/item/update/[id]/route";
 import Link from "next/link";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 const getAllItem = async () => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_URL}/api/item/readall`,
