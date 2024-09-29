@@ -49,7 +49,7 @@ const UpdateItem = ({ params }: { params: { id: string } }) => {
   useEffect(() => {
     (async () => {
       const singleItem = await getSingleItem(params.id);
-      singleItem &&
+      if (singleItem)
         setFormData({
           title: singleItem.title,
           price: singleItem.price,
